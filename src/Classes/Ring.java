@@ -1,4 +1,4 @@
-package distributedassignment;
+package Classes;
 
 import java.io.IOException;
 import java.util.LinkedList;
@@ -26,12 +26,12 @@ public class Ring {
         this.updateRing();
 
     }
-
+    
+    //Extra function if one wants to add ring to a specific position
     public void addNode(Node n, int position) throws IOException {
         if (position == this.ring.size()) {
             this.addNode(n);
         } else {
-            System.out.println("bruh");
             this.ring.set(position, n);
         }
         this.updateRing();
@@ -61,9 +61,9 @@ public class Ring {
             try {
                 node.updateThreads();
             } catch (IOException ex) {
-                System.out.println("Failed Establishing Stuff");
+                System.out.println("Failed Establishing Threads");
             }
-            System.out.println("Establishing stuff");
+            System.out.println("Establishing Threads");
             try {
                 Thread.sleep(100);
             } catch (InterruptedException ex) {

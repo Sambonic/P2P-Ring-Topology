@@ -1,10 +1,10 @@
-package distributedassignment;
+package Classes;
 
 import GUI.CreateNodeGUI;
 import java.io.IOException;
 
 
-public class DistributedAssignment {
+public class Main {
 
   
 

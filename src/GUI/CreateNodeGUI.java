@@ -1,8 +1,8 @@
 package GUI;
 
-import distributedassignment.Coordinator;
-import distributedassignment.Node;
-import distributedassignment.Ring;
+import Classes.Coordinator;
+import Classes.Node;
+import Classes.Ring;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;

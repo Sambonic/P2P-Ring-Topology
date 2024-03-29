@@ -1,4 +1,4 @@
-package distributedassignment;
+package Classes;
 
 import GUI.CoordinatorControl;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package distributedassignment;
+package Classes;
 
 import GUI.NodeGUI;
 import java.io.*;
@@ -129,7 +129,8 @@ public class Node implements Runnable {
             System.err.println("Error: Cannot send message without a successor node.");
         }
     }
-
+    
+    //Encrypt and Decrypt using target port number
     public String encryptMessage(String message, int targetPort) {
         int zeroes = Integer.toString(targetPort).length();
         int subtractor = Math.max(1, (int) Math.round(targetPort / Math.pow(10, zeroes)));
@@ -195,7 +196,6 @@ public class Node implements Runnable {
 
                     //Decrypt Message for both sender and reciever only
                     this.decryptMessage(msg);
-                    //|| (msg.getSenderID() != 0 && msg.getSenderID() == this.getHostID())
                 } else {
                     String output = msg.getSender() + msg.getMessage();
                     this.getMessages().add(output);
@@ -208,7 +208,7 @@ public class Node implements Runnable {
             }
 
         } catch (IOException e) {
-            System.out.println("Error took place in run");
+            System.out.println("Error while " + this.getName() +  " was listening");
         }
     }
 }
